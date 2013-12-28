@@ -1,9 +1,9 @@
 Introduce                                                                                                                          
----------                                                                                      
+---                                                                                      
 I forked this repository from [Torndb](https://github.com/bdarnell/torndb) and make it could connect different databases using     arguments in config file named ``dbconf.py``.                                                  
 
 Usage                                                                                          
------                                                                                          
+---                                                                                          
 ```python                                                                                      
 import torndb                                                                                  
 #connect using default arguments                                                               
@@ -13,7 +13,7 @@ db = torndb.connect("test")
 ```                                                                                            
 
 Sample Config                                                                                  
--------------                                                                                  
+---                                                                                  
 ```python                                                                                      
 conf["default"]["host"] = "localhost"                                                          
 conf["default"]["database"] = "database"                                                       
