@@ -12,7 +12,7 @@ db = torndb.connect()
 db = torndb.connect("test")                                                                    
 ```                                                                                            
 
-Sample Config                                                                                  
+Config Sample
 ---                                                                                  
 ```python                                                                                      
 conf["default"]["host"] = "localhost"                                                          
