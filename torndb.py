@@ -45,6 +45,20 @@ except ImportError:
 version = "0.2"
 version_info = (0, 2, 0, 0)
 
+
+def connect(conf="default"):
+    """
+        Connect database according to config specified by the argument.
+
+        Added by maxint64
+    """
+    try:
+        import dbconf
+    except ImportError:
+        raise ImportError("Database config file not found.")
+
+    return Connection(**dbconf.db[conf])
+
 class Connection(object):
     """A lightweight wrapper around MySQLdb DB-API connections.
 
