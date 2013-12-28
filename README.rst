@@ -1,22 +1,26 @@
-Torndb
-======
+Introduce
+---------
+I forked this repository from Torndb() and make it could connect different databases using 
+arguments in config file named ``dbconf.py``.
 
-Torndb is a simple wrapper around MySQLdb that originally appeared
-in Tornado (http://www.tornadoweb.org).  It is being moved into
-a separate package for Tornado 3.0.
+Usage
+-----
+```python
+import torndb
+#connect using default arguments
+db = torndb.connect()
+#or connect to a test database
+db = torndb.connect("test")
+```
 
-This package is not actively maintained, and since it exists primarily
-for backwards compatibility with the module provided in Tornado prior
-to version 3.0, I do not intend to make major changes or merge pull
-requests that do so.  You are welcome to create a fork, but pull
-requests are unlikely to get merged into this repo.
-
-Installation
-------------
-
-``pip install torndb``
-
-Documentation
+Sample Config
 -------------
-
-http://torndb.readthedocs.org
+```python
+conf["default"]["host"] = "localhost"
+conf["default"]["database"] = "database"
+conf["default"]["user"] = "user"
+conf["default"]["password"] = "password"
+conf["default"]["max_idle_time"] = 7*3600
+conf["default"]["connect_timeout"] = 0
+conf["default"]["time_zone"] = "+0:00" 
+```
